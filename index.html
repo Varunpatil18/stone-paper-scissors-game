@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stone Paper Scissors</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Stone Paper Scissors</h1>
+
+  <!-- Target Score Selector -->
+  <div class="target-container">
+    <label for="target-select">Playing to:</label>
+    <select id="target-select">
+      <option value="5">5 Points</option>
+      <option value="10" selected>10 Points</option>
+      <option value="20">20 Points</option>
+      <option value="25">25 Points</option>
+      <option value="50">50 Points</option>
+    </select>
+    <button id="reset-btn">Reset Game</button>
+  </div>
+
+  <!-- Choices (Using crisp SVGs so no images can ever break) -->
+  <div class="choices">
+    <div class="choice" id="rock">
+      <div class="choice-icon">🪨</div>
+      <p>Rock</p>
+    </div>
+    <div class="choice" id="paper">
+      <div class="choice-icon">📄</div>
+      <p>Paper</p>
+    </div>
+    <div class="choice" id="scissors">
+      <div class="choice-icon">✂️</div>
+      <p>Scissors</p>
+    </div>
+  </div>
+
+  <!-- Score Board -->
+  <div class="score-board">
+    <div class="score">
+      <p id="user-score">0</p>
+      <p>You</p>
+    </div>
+    <div class="score">
+      <p id="comp-score">0</p>
+      <p>Comp</p>
+    </div>
+  </div>
+
+  <!-- Move & Status Message -->
+  <div class="msg-container">
+    <p id="msg">Play your move</p>
+  </div>
+
+  <!-- Feedback / Review Section -->
+  <div class="review-section">
+    <h3>Leave a Review</h3>
+    <div class="stars" id="star-rating">
+      <span class="star" data-val="1">★</span>
+      <span class="star" data-val="2">★</span>
+      <span class="star" data-val="3">★</span>
+      <span class="star" data-val="4">★</span>
+      <span class="star" data-val="5">★</span>
+    </div>
+    <textarea id="review-text" rows="3" placeholder="Share your experience playing this game..."></textarea>
+    <button id="submit-review-btn">Submit Review</button>
+    <p id="review-status"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
